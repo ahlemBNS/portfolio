@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/scss/variables";
+
+body {
+  background-color: $primary-background;
+  margin: 0;
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  color: $primary-font-color;
+}
+.areas {
+  background-color: $areas-background;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  padding: 7px 10px;
+  border-radius: 25px;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(99, 157, 245);
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
