@@ -3,43 +3,28 @@
     <div class="d-flex flex-row menu justify-content-end">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" href="#">HOME</a>
+          <a class="nav-link" (click)="set('home')" href="#">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">PROJECTS</a>
+          <a class="nav-link" (click)="set('projects')" href="#">PROJECTS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SKILLS</a>
+          <a class="nav-link" (click)="set('skills')" href="#">SKILLS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">BLOG</a>
+          <a class="nav-link" (click)="set('blog')" href="#">BLOG</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CONTACT</a>
+          <a class="nav-link" (click)="set('contact')" href="#">CONTACT</a>
         </li>
       </ul>
     </div>
-    <h1 class="name">
-      Ahlem Ben Slama
-    </h1>
-    <div class="main">
-      <div class="image">
-        <img class="rounded-circle" src="assets/images/photo.jpg" />
-      </div>
-      <div class="overview">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error
-        nihil totam assumenda, laborum accusamus, libero quidem deserunt
-        pariatur in nobis dignissimos non ut? Quia, earum? Corrupti,
-        consequatur! Rerum, nemo?
-      </div>
-      <div class="d-flex flex-row justify-content-center social">
-        <span class="mr-3 social-icon"><i class="fab fa-github"></i></span>
-        <span class="mr-3 social-icon"><i class="fab fa-twitter"></i></span>
-        <span class="mr-3 social-icon"><i class="fab fa-instagram"></i></span>
-      </div>
-      <button class="btn download-btn">
-        <i class="fa fa-download"></i> DOWNLOAD MY CV
-      </button>
+    <div [ngSwitch]="selected">
+      <app-home *ngSwitchCase="'home'"></app-home>
+      <app-skills-list *ngSwitchCase="'skills'"></app-skills-list>
+      <app-projects-list *ngSwitchCase="'projects'"></app-projects-list>
+      <app-contact *ngSwitchCase="'contact'"></app-contact>
+      <app-blog *ngSwitchCase="'blog'"></app-blog>
     </div>
   </div>
 </div>
