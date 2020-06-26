@@ -1,30 +1,39 @@
-<div class="container">
+<div class="d-flex flex-row menu justify-content-center">
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" (click)="set('home')" href="#">HOME</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" (click)="set('projects')" href="#">PROJECTS</a>
+    </li> -->
+    <li class="nav-item">
+      <a class="nav-link" (click)="set('cv')" href="#">CV</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="set('skills')" href="#">SKILLS</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" (click)="set('blog')" href="#">BLOG</a>
+    </li> -->
+    <li class="nav-item">
+      <a class="nav-link" (click)="set('contact')" href="#">CONTACT</a>
+    </li>
+  </ul>
+</div>
+<div
+  class="container"
+  [ngClass]="{
+    'second-background': selected !== 'home'
+  }"
+>
   <div class="d-flex flex-column center-vertically">
-    <div class="d-flex flex-row menu justify-content-end">
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" (click)="set('home')" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="set('projects')" href="#">PROJECTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="set('skills')" href="#">SKILLS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="set('blog')" href="#">BLOG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="set('contact')" href="#">CONTACT</a>
-        </li>
-      </ul>
-    </div>
     <div [ngSwitch]="selected">
       <app-home *ngSwitchCase="'home'"></app-home>
       <app-skills-list *ngSwitchCase="'skills'"></app-skills-list>
-      <app-projects-list *ngSwitchCase="'projects'"></app-projects-list>
+      <!-- <app-projects-list *ngSwitchCase="'projects'"></app-projects-list> -->
       <app-contact *ngSwitchCase="'contact'"></app-contact>
-      <app-blog *ngSwitchCase="'blog'"></app-blog>
+      <!-- <app-blog *ngSwitchCase="'blog'"></app-blog> -->
+      <app-cv *ngSwitchCase="'cv'"></app-cv>
     </div>
   </div>
 </div>
