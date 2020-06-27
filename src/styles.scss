@@ -23,3 +23,32 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+@media (max-width: 768px) {
+  body,
+  html {
+    background-image: url(./assets/images/mobile.gif);
+    height: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    margin: 0;
+  }
+
+  .website {
+    display: none;
+  }
+  .message {
+    display: inline-block !important;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    color: #f30a75;
+  }
+}
