@@ -55,6 +55,16 @@
   border-radius: 10px;
   overflow-y: scroll;
 }
-.message {
+.message-mobile {
   display: none;
+}
+.website {
+  display: none;
+}
+.message-desktop {
+  padding-top: 100px;
+
+  text-align: center;
+  font-size: 30px;
+  color: white;
 }
