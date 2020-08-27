@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService } from "src/app/services/data.service";
 
 @Component({
   selector: "app-main",
@@ -8,15 +7,7 @@ import { DataService } from "src/app/services/data.service";
 })
 export class MainComponent implements OnInit {
   selected = "";
-  constructor(private dataService: DataService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.dataService._selectedItem.subscribe(item => {
-      this.selected = item;
-    });
-  }
-
-  set(item: string) {
-    this.dataService.setItem(item);
-  }
+  ngOnInit() {}
 }
